@@ -1,0 +1,6 @@
+
+
+.tickets-page__container {
+    background: linear-gradient(180deg, #F56B9A 0%, rgba(177, 52, 254, 0) 100%);
+    min-height: 100vh;
+}

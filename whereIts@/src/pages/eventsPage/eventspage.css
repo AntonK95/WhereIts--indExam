@@ -1,0 +1,28 @@
+.events__page {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    color: #F56B9A;
+}
+
+.input-field {
+    align-self: center;
+    min-width: 80%;
+    min-height: 40px;
+    background-color: #FFFFFF1A;
+    border: none;
+    border-radius: 3px;
+    padding: .4rem 1.5rem;
+}
+
+.event__card {
+    display: flex;
+    margin: 0 auto;
+}
+
+
