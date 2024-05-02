@@ -1,6 +1,6 @@
+import { EventContext } from '../../store/EventContext';
 
-
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 import './eventspage.css';
 
@@ -9,7 +9,7 @@ import ApiHandler from '../../apihandler/ApiHandler';
 
 function EventsPage() {
 
-    const [events, setEvents] = useState([]);
+    const { events, setEvents } = useContext(EventContext);
 
   return (
     <div className='events__page'>

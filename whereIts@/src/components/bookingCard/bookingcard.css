@@ -1,0 +1,21 @@
+
+.booking__card {
+    margin: 3rem 0;
+}
+
+.event-date-and-time {
+    color: var(--event-price-color);
+    font-family: var(--event-price-font);
+}
+
+.total-amount {
+    color: var(--event-title-color);
+    font-family: var(--event-title-font);
+    font-size: var(--event-title-size);
+    text-shadow: var(--event-title-shadow);
+}
+
+.minus,
+.plus {
+    color: var(--event-date-color);
+}
