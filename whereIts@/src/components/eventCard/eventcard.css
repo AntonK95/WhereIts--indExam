@@ -85,14 +85,18 @@
 }
 
 @media (max-width: 400px ) {
-    .event-item {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-        align-items: center;
-    }
+     .event-item {
+     /*   display: flex;
+        flex-direction: column;*/
+        /* max-width: 80%; */
+        /* align-items: center; */
+        margin: 1rem;
+    } 
     .grid-card {
         width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .event-date {
         padding: 10px;

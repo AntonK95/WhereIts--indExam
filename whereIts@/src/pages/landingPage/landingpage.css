@@ -15,11 +15,18 @@
     ' shoulders ';
 }
 
-.landingpage-title {
+.landing-page__title {
     font-family: var(--sansita-font);
     color: var(--pink-text-color);
     text-align: center;
     margin: 2rem;
+}
+
+.landing-page__h2 {
+    font-family: var(--sansita-font);
+    color: var(--event-time-color);
+    font-size: 16px;
+    text-align: center;
 }
 
 .item-1 {

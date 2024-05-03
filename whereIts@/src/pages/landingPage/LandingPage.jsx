@@ -25,7 +25,8 @@ function LandingPage() {
             <Head className='head'/>
             <Shoulders className='shoulders'/>
         </div>
-        <h1 className="landingpage-title">Where it's @!</h1>
+        <h1 className="landing-page__title">Where it's @!</h1>
+        <h2 className='landing-page__h2'>Tap to continue</h2>
     </Link>
   )
 }
