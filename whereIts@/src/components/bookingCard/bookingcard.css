@@ -70,3 +70,15 @@
     border: solid 1px var(--pink-text-color);
     padding: 10px;
 }
+
+.add-to-cart__btn {
+    justify-self: center;
+    margin: 4rem auto;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--btn-color);
+    padding: 1rem 3.5rem;
+    color: white;
+    font-family: var(--fira-sans);
+    font-size: 22px;
+}

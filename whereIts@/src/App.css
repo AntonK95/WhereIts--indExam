@@ -12,7 +12,7 @@
 :root {
 
     --sansita-font: Sansita;
-
+    --fira-sans: Fira sans;
     --pink-text-color: #F56B9A;
 
     --event-title-font: Fira sans;
@@ -41,6 +41,7 @@
 
     --body-background-color: #231F42;
 
+    --btn-color: #37AEAB;
 
 }
 

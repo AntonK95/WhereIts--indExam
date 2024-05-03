@@ -1,10 +1,12 @@
 
 import './bookingcard.css';
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from '../../store/CartContext';
 
 function BookingCard({ event }) {
 
+    const { addToCart } = useContext(CartContext);
     const [ticketCount, setTicketCount] = useState(1);
 
     const handleIncrease = () => {
@@ -17,7 +19,16 @@ function BookingCard({ event }) {
         }
     };
 
-    console.log(event, 'BookingCard' )
+    const handleAddToCart = () => {
+        addToCart(event, ticketCount);
+    }
+
+    // console.log(event, 'BookingCard' )
+    // console.log(event, ticketCount )
+    // console.log(event, ticketCount, 'ticketCount' )
+    console.log(event, handleAddToCart, 'handleAddToCart' )
+    console.log(event, addToCart, 'addToCart' )
+    console.log( handleAddToCart )
   return (
     <>
         <div className='booking__card'>
@@ -39,7 +50,9 @@ function BookingCard({ event }) {
                 <p className='plus'>+</p>
             </div>
         </div>
-
+            <button className='add-to-cart__btn'
+                onClick={handleAddToCart}>Lägg i varukorg
+            </button>
     </>
   );
 }
