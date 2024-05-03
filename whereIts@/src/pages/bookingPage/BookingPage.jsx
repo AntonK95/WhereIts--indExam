@@ -16,7 +16,7 @@ function BookingPage() {
 
   return (
     <div className="booking-page__container">
-      <h2 className="page-title">Event</h2>
+      <h2 className="page-title__sansita">Event</h2>
       <h3 className="score-text">You are about to score some tickets to</h3>
       {event && <BookingCard event={event} />}
     </div>

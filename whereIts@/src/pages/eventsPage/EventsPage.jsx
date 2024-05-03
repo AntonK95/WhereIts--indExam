@@ -12,6 +12,7 @@ function EventsPage() {
     const { events, setEvents } = useContext(EventContext);
 
   return (
+    
     <div className='events__page'>
         <ApiHandler setEvents={ setEvents } />
         <EventCard events={ events } />

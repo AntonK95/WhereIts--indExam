@@ -9,7 +9,7 @@ function EventCard( { events } ) {
     console.log(events, 'EventCard')
   return (
     <>
-        <h1 className='page-title'>Events</h1>
+        <h1 className='page-title page-title__sansita'>Events</h1>
         <input type="text" className='input-field'/>
         <div className="event__card">
             <ul className='grid-card'>

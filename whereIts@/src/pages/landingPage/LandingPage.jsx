@@ -9,23 +9,24 @@ import OrangeCircle from "../../assets/svg/OrangeCircle";
 import PurpleCross from "../../assets/svg/PurpleCross";
 import RedSQLine from "../../assets/svg/RedSQLine";
 import Shoulders from "../../assets/svg/Shoulders";
+import { Link } from 'react-router-dom';
 
 
 
 function LandingPage() {
   return (
-    <div className='landing-page__container'>
+    <Link to={'/eventpage'} className='landing-page__container'>
         <div className="svg__container">
-            <OrangeCircle />
-            <GreenDot />
-            <PurpleCross />
-            <RedSQLine />
-            <GreenTriangle />
-            <Head />
-            <Shoulders />
+            <OrangeCircle className='item-1'/>
+            <GreenDot className='item-2'/>
+            <PurpleCross className='item-3'/>
+            <RedSQLine className='item-4'/>
+            <GreenTriangle className='item-5'/>
+            <Head className='head'/>
+            <Shoulders className='shoulders'/>
         </div>
         <h1 className="landingpage-title">Where it's @!</h1>
-    </div>
+    </Link>
   )
 }
 
