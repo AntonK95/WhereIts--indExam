@@ -1,0 +1,13 @@
+
+.cart-page__wrapper {
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.cart-page__title {
+    color: var(--pink-text-color);
+    font-family: var(--sansita-font);
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 3rem;
+}

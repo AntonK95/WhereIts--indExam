@@ -14,12 +14,25 @@ export const CartProvider = ({ children }) => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems]);
 
-    const addToCart = (event, quantity) => {
-        setCartItems(prevItem => [...prevItem, { event, quantity}]);
+    const addToCart = (eventItem, quantity) => {
+        const updatedCartItems = cartItems.map(cartItem => {
+            if(cartItem.event.id === eventItem.event.id) {
+                return { ...cartItem, quantity };
+            }
+            return cartItem;
+        })
+        setCartItems(updatedCartItems);
+        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
     };
 
+    const removeFromCart = (event) => {
+        const updatedCartItems = cartItems.filter(item => item.event !== event);
+        setCartItems(updatedCartItems);
+        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+    }
+
     return (
-        <CartContext.Provider value={ { cartItems, addToCart } }>
+        <CartContext.Provider value={ { cartItems, addToCart, removeFromCart } }>
             {children}
         </CartContext.Provider >
     )

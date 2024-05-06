@@ -12,6 +12,7 @@ import BookingPage from './pages/bookingPage/BookingPage.jsx';
 import TicketsPage from './pages/ticketsPage/TicketsPage.jsx';
 import CartPage from './pages/cartPage/CartPage.jsx';
 import { CartProvider } from './store/CartContext.jsx';
+import Navigation from './components/navigation/Navigation.jsx';
 
 function App( ) {
 
@@ -30,6 +31,7 @@ function App( ) {
             <Route path='/cartpage' element={<CartPage />} />
             <Route path='/ticketspage' element={ <TicketsPage /> } />
           </Routes>
+          <Navigation />
         </CartProvider>
       </EventContext.Provider>
     </div>

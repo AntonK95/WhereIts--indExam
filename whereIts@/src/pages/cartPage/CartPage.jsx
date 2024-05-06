@@ -1,7 +1,8 @@
 
+import './cartpage.css'
 
 import { useContext } from 'react'
-// import CartCard from '../../components/cartCard/CartCard';
+import CartCard from '../../components/cartCard/CartCard';
 import { CartContext } from '../../store/CartContext';
 
 function CartPage() {
@@ -11,16 +12,12 @@ function CartPage() {
     console.log(cartItems, 'CartPage');
   return (
     <section className='cart-page__wrapper'>
-        <h2>Kundvagn</h2>
+        <h2 className='cart-page__title'>Order</h2>
         <ul>
             {cartItems.map((item, index) => (
-                <li key={index}>
-                    <p>Evenemag: {item.event.name}</p>
-                    <p>Antal biljetter: {item.quantity}</p>
-                </li>
+                <CartCard key={index} item={ item }/>
             ))}
         </ul>
-        {/* <CartCard cartItems={ cartItems }/> */}
     </section >
   )
 }
