@@ -19,16 +19,18 @@ function BookingCard({ event }) {
         }
     };
 
-    const handleAddToCart = () => {
+    const handleAddToCart = () => { 
         addToCart(event, ticketCount);
     }
 
     // console.log(event, 'BookingCard' )
     // console.log(event, ticketCount )
     // console.log(event, ticketCount, 'ticketCount' )
-    console.log(event, handleAddToCart, 'handleAddToCart' )
-    console.log(event, addToCart, 'addToCart' )
+    // console.log(event, handleAddToCart, 'handleAddToCart' )
+    // console.log(event, addToCart, 'addToCart' )
     console.log( handleAddToCart )
+    console.log( event, 'Eventet som skall skickas')
+    console.log( ticketCount, 'Antal biljetter som skall skickas till addToCart')
   return (
     <>
         <div className='booking__card'>

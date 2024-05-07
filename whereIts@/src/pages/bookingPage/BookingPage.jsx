@@ -11,8 +11,8 @@ function BookingPage() {
   const { events } = useContext(EventContext);
   const event = events.find(event => event.name === decodeURIComponent(eventName));
   
-  console.log(events, 'Booking page')
-  console.log(event, 'BookingPage')
+  // console.log(events, 'Booking page')
+  // console.log(event, 'BookingPage')
 
   return (
     <div className="booking-page__container">

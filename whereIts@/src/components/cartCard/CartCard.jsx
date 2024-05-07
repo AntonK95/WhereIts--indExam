@@ -6,16 +6,24 @@ import { CartContext } from '../../store/CartContext';
 function CartCard({ item })  {
 //   const {cartItems} = useContext(CartContext);
 
+console.log(item, 'objekt mottaget från BookingCard');
+console.log(item.event, 'eventobjekt från item');
+
+
+// Kontrollera om item.event är definerat innan försök för att komma åt egenskaper
+if(!item.event) {
+        return null;
+    }
     
     const { addToCart, removeFromCart } = useContext(CartContext);
 
     const handleIncrease = () => {
-        addToCart(item, item.quantity + 1);
+        addToCart(item.event, item.quantity + 1);
     };
 
     const handleDecrease = () => {
         if (item.quantity > 1 ) {
-            addToCart(item, item.quantity - 1);
+            addToCart(item.event, item.quantity - 1);
         } else {
             removeFromCart(item.event);
         }
@@ -33,7 +41,9 @@ function CartCard({ item })  {
     <section className='cart-card__wrapper'>
         <section className='cart-card__event'>
         <p>{item.event.name}</p>
-        <p className='event-date-and-time'>{item.event.when.date} {item.event.when.from} - {item.event.when.to}</p>
+        { item.event.when && (
+            <p className='event-date-and-time'>{item.event.when.date} {item.event.when.from} - {item.event.when.to}</p>
+        )}
         {/* <p>{item.event.quantity}</p> */}
         </section>
         <section className='cart-card__buttons'>
