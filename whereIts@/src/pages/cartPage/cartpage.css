@@ -11,3 +11,25 @@
     font-size: 32px;
     margin-bottom: 3rem;
 }
+
+.cart-item__container {
+    min-height: 60vh;
+}
+
+.price-section {
+    margin-top: .5rem;
+}
+
+.cart-page__price-text {
+    font-family: var(--fira-sans);
+    font-style: italic;
+    color: var(--event-time-color);
+}
+
+.cart-page__price {
+    font-family: var(--fira-sans);
+    font-weight: 700;
+    font-size: 32px;
+    text-shadow: var(--event-title-shadow);
+    padding-bottom: 5rem;
+}
