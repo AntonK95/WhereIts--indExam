@@ -33,9 +33,9 @@ if(!item.event) {
     //     removeFromCart(item.event);
     // }
 
-    const handleAddToCart = () => {
-        addToCart(item, ticketCount);
-    }
+    // const handleAddToCart = () => {
+    //     addToCart(item, ticketCount);
+    // }
   
     return (
     <section className='cart-card__wrapper'>

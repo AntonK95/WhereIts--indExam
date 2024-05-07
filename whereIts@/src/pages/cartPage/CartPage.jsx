@@ -1,13 +1,15 @@
 
 import './cartpage.css'
 
+import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react'
 import CartCard from '../../components/cartCard/CartCard';
 import { CartContext } from '../../store/CartContext';
 
 function CartPage() {
 
-    const {cartItems} = useContext(CartContext);
+    const navigate = useNavigate();
+    const { cartItems } = useContext(CartContext);
 
 
     const calcTotalCost = () => {
@@ -19,6 +21,18 @@ function CartPage() {
       return totalCost;
     }
 
+    const handleOrderBtnClick = () => {
+      // Spara data från localStorage till en variabel
+      const savedData = localStorage.getItem('cartItems');
+      // Navigera till TicketPage och skicka med data från localStorage
+      navigate( '/ticketspage',  
+        { state: 
+        {cartItems: JSON.parse(savedData)} 
+    });
+      // Rensa localStorage
+      localStorage.removeItem('cartItems');
+    }
+
     console.log(cartItems, 'CartPage');
   return (
     <section className='cart-page__wrapper'>
@@ -28,6 +42,7 @@ function CartPage() {
                 <CartCard key={index} item={ item }/>
             ))}
         </ul>
+        <button className='order__btn' onClick={ handleOrderBtnClick }>Skicka Order</button>
         <section className='price-section'>
           <p className='cart-page__price-text'>Totalt värde på order:</p>
           <p className='cart-page__price'>{calcTotalCost()}</p>
