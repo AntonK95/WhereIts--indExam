@@ -13,6 +13,7 @@ function TicketsPage() {
   return (
     <section className="tickets-page__container">
       <article>
+        
         {cartItems.map((item, index) => (
           <TicketCard key={index} index={index} item={item} />
           // <div key={index}>
