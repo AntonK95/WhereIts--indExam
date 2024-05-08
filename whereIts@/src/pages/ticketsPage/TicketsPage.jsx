@@ -14,7 +14,7 @@ function TicketsPage() {
     <section className="tickets-page__container">
       <article>
         {cartItems.map((item, index) => (
-          <TicketCard key={index} item={item} />
+          <TicketCard key={index} index={index} item={item} />
           // <div key={index}>
           //   <p>{item.event.name}</p>
           //   <p>{item.event.when.date}</p>
