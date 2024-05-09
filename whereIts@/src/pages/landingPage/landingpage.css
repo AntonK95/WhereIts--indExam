@@ -3,16 +3,24 @@
 .landing-page__container {
     background-color: var(--body-background-color);
     text-decoration: none;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .svg__container {
-    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 300px;
+    margin: 0 auto;
     display: grid;
     grid-template-areas: 
 
     'item-1 item-2 item-3'
     'item-4 head item-5'
-    ' shoulders ';
+    ' shoulders '; */
 }
 
 .landing-page__title {

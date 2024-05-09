@@ -6,14 +6,14 @@ function Navigation() {
   return (
     <>
         <div className='navbar'>
-            <Link to={'/eventpage'} >
-                Events
+            <Link  to={'/eventpage'} >
+                <button className='events' aria-label='events'>Events</button>
             </Link>
             <Link to={'/cartpage'} >
-                Cart
+                <button className='cart'>Cart</button>
             </Link>
             <Link to={'/ticketspage'} >
-                Tickets
+                <button className='tickets'>Tickets</button>
             </Link>
         </div>
     </>

@@ -21,3 +21,13 @@
     max-width: 80%;
     margin: 1rem auto;
 }
+
+.events, 
+.cart,
+.tickets {
+    font-family: var(--sansita-font);
+    color: var(--pink-text-color);
+    font-size: 16px;
+    border: none;
+    background-color: var(--body-background-color);
+}

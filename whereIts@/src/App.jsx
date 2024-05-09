@@ -19,6 +19,7 @@ function App( ) {
   const eventStore = useEventStore(); // Instans av useEventStore
   // const [events, setEvents] = useState([]);
 
+  const isNavigationVisible = location.pathname !== '/';
 
   return (
     <div className='body__section'>
@@ -31,7 +32,7 @@ function App( ) {
             <Route path='/cartpage' element={<CartPage />} />
             <Route path='/ticketspage' element={ <TicketsPage /> } />
           </Routes>
-          <Navigation />
+          { isNavigationVisible && <Navigation />} {/* Visar inte Navigation på startsidan */}
         </CartProvider>
       </EventContext.Provider>
     </div>

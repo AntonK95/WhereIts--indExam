@@ -9,50 +9,28 @@ function TicketCard({ item, index, section, quantity }) {
         return `Section: ${section} Seat: ${seat}`;
     };
 
-
     // Förklaring
     // const section = String.fromCharCode(65 + Math.floor(index / 10));
     // För varje 10:e biljett ökar vi sektionen. 
     // String.fromCharCode används för att konvertera ett nummer till motsvarande tecken i ASCII-tabellen. 
     // 65 representerar bokstaven "A" i ASCII-tabellen, 
     // så när index ökar med 10 kommer vi att gå från "A" till "B", "C" och så vidare.
-
-    // Generera sittplats för aktuell ticket
-    const seat = generateSeat(index, section);
-
-    // const generateTicketID = () => {
-    //     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    //     let ticketID = '';
-    //     for(let i = 0; i < 5; i++) {
-    //         const randomIndex = Math.floor(Math.random() * characters.length);
-    //         ticketID += characters[randomIndex];
-    //     }
-    //     console.log(ticketID);
-    //     return ticketID;
-    // }
-    
-    // const generateTickets = (quantity, section) => {
-    //     const tickets = [];
-    //     let seatNumber = 1; 
-    //     for(let i = 0; i < quantity; i++) {
-    //         const ticketID = generateTicketID();
-    //         const seat = `${section} ${seatNumber}`;
-    //         tickets.push({ ticketID, section, seat });
-    //         seatNumber++;
-    //     }
-    //     return tickets;
-    // }
-
-    // // Funktion för att generera sittplats till biljett
-    // const generateSeat = (index, section) => {
-    //     const seatNumber = index + 1;
-    //     return `Section: ${section} Seat: ${seatNumber}`
-    // };
-
   
+    const generateTicketNumber = () => {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let ticketID = '';
+        for(let i = 0; i < 5; i++) {
+           const randomIndex = Math.floor(Math.random() * characters.length);
+           ticketID += characters[randomIndex]; 
+        }
+        return ticketID;
+    }
+
+
     const tickets = [];
     for (let i = 0; i < quantity; i++) {
         const seat = generateSeat(index + i, section);
+        const ticketID = generateTicketNumber();
         tickets.push(
             <section key={index + 1} className="ticket-card__wrapper">
          <section className="ticket-card__container">
@@ -85,8 +63,8 @@ function TicketCard({ item, index, section, quantity }) {
                 </p>
              </section>
              <section className="ticket-card__order-number">
-                <p className='barcode'>#A4E31</p>
-                <p className='order-number'>#A4E31</p>
+                <p className='barcode'>{`#${ticketID}`}</p>
+                <p className='order-number'>{`#${ticketID}`}</p>
              </section>
            </section>
     </section>

@@ -2,7 +2,7 @@
 
 .ticket-card__wrapper {
     max-width: 80%;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 .ticket-card__container {
