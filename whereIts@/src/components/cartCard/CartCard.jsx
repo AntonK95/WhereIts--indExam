@@ -40,7 +40,7 @@ if(!item.event) {
     return (
     <section className='cart-card__wrapper'>
         <section className='cart-card__event'>
-        <p>{item.event.name}</p>
+        <p className='cart-card__name'>{item.event.name}</p>
         { item.event.when && (
             <p className='event-date-and-time'>{item.event.when.date} {item.event.when.from} - {item.event.when.to}</p>
         )}

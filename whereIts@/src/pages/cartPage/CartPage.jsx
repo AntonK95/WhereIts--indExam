@@ -57,7 +57,7 @@ function CartPage() {
         <button className='order__btn' onClick={ handleOrderBtnClick }>Skicka Order</button>
         <section className='price-section'>
           <p className='cart-page__price-text'>Totalt värde på order:</p>
-          <p className='cart-page__price'>{calcTotalCost()}</p>
+          <p className='cart-page__price'>{calcTotalCost()} SEK</p>
         </section>
     </section >
   )

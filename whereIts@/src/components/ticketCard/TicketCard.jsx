@@ -19,8 +19,9 @@ function TicketCard({ item, index, section, quantity }) {
     const generateTicketNumber = () => {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         let ticketID = '';
-        for(let i = 0; i < 5; i++) {
-           const randomIndex = Math.floor(Math.random() * characters.length);
+        ticketID += characters[Math.floor(Math.random() * 10) + 26]; // Börja från index 26
+        for(let i = 0; i < 4; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length); // Börja från index 26
            ticketID += characters[randomIndex]; 
         }
         return ticketID;

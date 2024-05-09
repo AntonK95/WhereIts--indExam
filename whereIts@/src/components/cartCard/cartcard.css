@@ -12,6 +12,16 @@
 .cart-card__event {
     border: 1px solid var(--pink-text-color);
     border-radius: 3px 3px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: .5rem;
+}
+
+.cart-card__name {
+    color: var(--pink-text-color);
+    font-family: var(--sansita-font);
+    font-size: 24px;
 }
 
 .cart-card__buttons {
