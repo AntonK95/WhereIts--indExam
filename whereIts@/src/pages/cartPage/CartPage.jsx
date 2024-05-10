@@ -10,7 +10,7 @@ import { generateTickets } from '../../components/generateTicketFunc/GenerateTic
 function CartPage() {
 
     const navigate = useNavigate();
-    const { cartItems } = useContext(CartContext);
+    const { cartItems, clearCart } = useContext(CartContext);
 
 
     const calcTotalCost = () => {
@@ -18,7 +18,7 @@ function CartPage() {
       cartItems.forEach(item => {
         totalCost += item.event.price * item.quantity;
       });
-      console.log(calcTotalCost, 'Total kostnad');
+      // console.log(calcTotalCost, 'Total kostnad');
       return totalCost;
     }
 
@@ -43,6 +43,7 @@ function CartPage() {
         { state: {cartItems: JSON.parse(savedData)} });
       // Rensa localStorage
       localStorage.removeItem('cartItems');
+      clearCart();
     }
 
     console.log(cartItems, 'CartPage');

@@ -107,4 +107,5 @@
 
 .order-number {
     color: black;
+    font-family: var(--fira-sans);
 }

@@ -28,7 +28,7 @@ function BookingCard({ event }) {
     // console.log(event, ticketCount, 'ticketCount' )
     // console.log(event, handleAddToCart, 'handleAddToCart' )
     // console.log(event, addToCart, 'addToCart' )
-    console.log( handleAddToCart )
+    // console.log( handleAddToCart )
     console.log( event, 'Eventet som skall skickas')
     console.log( ticketCount, 'Antal biljetter som skall skickas till addToCart')
   return (
