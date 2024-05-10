@@ -1,0 +1,21 @@
+
+.page-title__sansita {
+    font-family: var(--sansita-font);
+    color: var(--pink-text-color);
+    font-size: 32px;
+}
+
+.score-text {
+    color: #FFFFFFCC;
+    font-family: var(--event-date-font);
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 3rem;
+    max-width: 200px;
+    margin: 3rem auto;
+}
+
+.booking-page__container {
+    text-align: center;
+    padding-top: 3rem;
+}

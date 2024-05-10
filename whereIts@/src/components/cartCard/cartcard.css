@@ -1,0 +1,38 @@
+
+
+.cart-card__wrapper {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: .5rem;
+}
+
+.cart-card__event {
+    border: 1px solid var(--pink-text-color);
+    border-radius: 3px 3px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: .5rem;
+}
+
+.cart-card__name {
+    color: var(--pink-text-color);
+    font-family: var(--sansita-font);
+    font-size: 24px;
+}
+
+.cart-card__buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.minus--left {
+    border-radius: 0px 0px 0px 3px;    
+}
+
+.plus--right {
+    border-radius: 0px 0px 3px 0px;
+}

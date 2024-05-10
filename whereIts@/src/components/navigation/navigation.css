@@ -1,0 +1,33 @@
+
+
+*{
+    color: white;
+}
+
+.navbar {
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 5; 
+    position: fixed;
+    max-height: 60px;
+    min-height: 50px;
+    background-color: var(--body-background-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid 2px var(--pink-text-color);
+    border-radius: 2rem;
+    max-width: 80%;
+    margin: 1rem auto;
+}
+
+.events, 
+.cart,
+.tickets {
+    font-family: var(--sansita-font);
+    color: var(--pink-text-color);
+    font-size: 16px;
+    border: none;
+    background-color: var(--body-background-color);
+}
