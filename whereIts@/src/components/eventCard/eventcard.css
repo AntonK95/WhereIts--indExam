@@ -86,13 +86,9 @@
 
 @media (max-width: 400px ) {
      .event-item {
-     /*   display: flex;
-        flex-direction: column;*/
-        /* max-width: 80%; */
-        /* align-items: center; */
         margin: 1rem;
     } 
-    .grid-card {
+    .flex-card {
         width: auto;
         display: flex;
         flex-direction: column;

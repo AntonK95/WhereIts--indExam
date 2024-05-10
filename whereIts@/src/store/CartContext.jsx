@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
     
     const addToCart = useCallback((eventItem, quantity) => {
         setCartItems(prevCartItems => {
-            console.log(prevCartItems, 'Event items in cart')
+            // console.log(prevCartItems, 'Event items in cart')
             const existingCartItemIndex = prevCartItems.findIndex(item => item.event && item.event.id === eventItem.id);
             if (existingCartItemIndex !== -1) {
                 // Om objektet redan finns i kundvagnen, uppdatera bara dess kvantitet

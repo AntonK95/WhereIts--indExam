@@ -35,7 +35,6 @@ if(!item.event) {
         { item.event.when && (
             <p className='event-date-and-time'>{item.event.when.date} {item.event.when.from} - {item.event.when.to}</p>
         )}
-        {/* <p>{item.event.quantity}</p> */}
         </section>
         <section className='cart-card__buttons'>
                 <div className='minus__wrapper--left' onClick={handleDecrease}>

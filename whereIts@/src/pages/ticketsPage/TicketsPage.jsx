@@ -23,7 +23,7 @@ function TicketsPage() {
         // Om ticketItems inte finns i localStorage, spara cartItems
         localStorage.setItem('ticketItems', JSON.stringify(cartItems));
         setTicketItems(cartItems);
-        console.log(ticketItems, 'TicketItems');
+        // console.log(ticketItems, 'TicketItems');
       }
     }, []); // Uppdatera när cartItems ändras
 

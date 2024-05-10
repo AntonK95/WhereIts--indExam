@@ -12,7 +12,7 @@ function EventCard( { events } ) {
         <h1 className='page-title page-title__sansita'>Events</h1>
         <input type="text" className='input-field'/>
         <div className="event__card">
-            <ul className='grid-card'>
+            <ul className='flex-card'>
             {events.map(event => (
                 <li key={event.name}>
                 <Link className='link event-item' to={`/bookingpage/${encodeURIComponent(event.name)}`}>

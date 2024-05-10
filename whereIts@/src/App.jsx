@@ -1,8 +1,6 @@
 
 import './App.css'
-// import ApiHandler from './apihandler/ApiHandler';
 import { Route, Routes } from 'react-router-dom';
-// import { useState } from 'react';
 import { EventContext, useEventStore } from './store/EventContext.jsx';
 
 
@@ -17,7 +15,6 @@ import Navigation from './components/navigation/Navigation.jsx';
 function App( ) {
 
   const eventStore = useEventStore(); // Instans av useEventStore
-  // const [events, setEvents] = useState([]);
 
   const isNavigationVisible = location.pathname !== '/';
 
