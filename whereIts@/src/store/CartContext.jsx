@@ -8,7 +8,7 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     // State för kundvagn
     const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cartItems')) || [] );
-    console.log(cartItems, 'cartItems CartContext')
+    // console.log(cartItems, 'cartItems CartContext')
 
     useEffect(() => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -31,22 +31,6 @@ export const CartProvider = ({ children }) => {
         });
     }, []);
     
-    // Nedan kod fungerade förut..
-    // const addToCart = (eventItem, quantity) => {
-    //     const updatedCartItems = cartItems.map(cartItem => {
-    //         if(cartItem.event.id === eventItem.event.id) {
-    //             return { ...cartItem, quantity };
-    //         }
-    //         return cartItem;
-    //     });
-    //     if(!updatedCartItems.some(item => item.event.id === eventItem.event.id)) {
-    //        updatedCartItems.push({ event: eventItem.event, quantity }); 
-    //     }
-    //     setCartItems(updatedCartItems);
-    //     localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-    // };
-
-
 
     const removeFromCart = (event) => {
         const updatedCartItems = cartItems.filter(item => item.event.id !== event.id);

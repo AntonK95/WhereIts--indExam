@@ -1,13 +1,12 @@
 
 import './cartcard.css'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { CartContext } from '../../store/CartContext';
 
 function CartCard({ item })  {
-//   const {cartItems} = useContext(CartContext);
 
-console.log(item, 'objekt mottaget från BookingCard');
-console.log(item.event, 'eventobjekt från item');
+// console.log(item, 'objekt mottaget från BookingCard');
+// console.log(item.event, 'eventobjekt från item');
 
 
 // Kontrollera om item.event är definerat innan försök för att komma åt egenskaper
@@ -28,14 +27,6 @@ if(!item.event) {
             removeFromCart(item.event);
         }
     };
-
-    // const handleRemoveFromCart = () => {
-    //     removeFromCart(item.event);
-    // }
-
-    // const handleAddToCart = () => {
-    //     addToCart(item, ticketCount);
-    // }
   
     return (
     <section className='cart-card__wrapper'>

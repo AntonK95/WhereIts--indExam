@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react'
 import CartCard from '../../components/cartCard/CartCard';
 import { CartContext } from '../../store/CartContext';
-import { generateTickets } from '../../components/generateTicketFunc/GenerateTicketFunc';
+
 
 function CartPage() {
 
@@ -22,19 +22,6 @@ function CartPage() {
       return totalCost;
     }
 
-
-    // const handleOrderBtnClick = () => {
-    //   const savedData = localStorage.getItem('cartItem');
-
-    //   // Skapa biljetter med unika ID och sittplatser
-    //   const tickets = generateTickets(cartItems.length, 'A');
-
-    //   navigate('/ticketspage', { state: { tickets } });
-
-    //   localStorage.removeItem('cartItems');
-    // }
-
-    // Förra funktionen
     const handleOrderBtnClick = () => {
       // Spara data från localStorage till en variabel
       const savedData = localStorage.getItem('cartItems');
@@ -46,7 +33,8 @@ function CartPage() {
       clearCart();
     }
 
-    console.log(cartItems, 'CartPage');
+    // console.log(cartItems, 'CartPage');
+
   return (
     <section className='cart-page__wrapper'>
         <h2 className='cart-page__title'>Order</h2>

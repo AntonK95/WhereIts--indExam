@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function EventCard( { events } ) {
 
-    console.log(events, 'EventCard')
+    // console.log(events, 'EventCard')
   return (
     <>
         <h1 className='page-title page-title__sansita'>Events</h1>

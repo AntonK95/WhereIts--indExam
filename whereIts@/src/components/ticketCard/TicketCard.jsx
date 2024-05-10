@@ -76,42 +76,6 @@ function TicketCard({ item, index, section, quantity }) {
         <div>
             { tickets }
         </div>
-    // <section className="ticket-card__wrapper">
-    //      <section className="ticket-card__container">
-    //          <section className='ticket-card__what'>
-    //             <p className='what'>WHAT</p>
-    //             <p className='ticket-card__name'>{item.event.name}</p>
-    //         </section>
-    //         <section className='ticket-card__where'>
-    //             <p className='where'>WHERE</p>
-    //             <p className='ticket-card__location'>{item.event.where}</p>
-    //         </section>
-    //          <div className="ticket-time">
-    //             <div className="ticket-date">
-    //                 <p className="ticket-when">WHEN</p>
-    //                 <p className='date'>{item.event.when.date}</p>
-    //             </div>
-    //             <div className='ticket-from'>
-    //                 <p className='ticket-from-time'>FROM</p>
-    //                 <p className='from'>{item.event.when.from}</p>
-    //             </div>
-    //             <div className='ticket-to'>
-    //                 <p className='ticket-to-time'>TO</p>
-    //                 <p className='to'>{item.event.when.to}</p>
-    //             </div>
-    //          </div>
-    //          <section className="ticket-card__info">
-    //             <p className='info'>INFO</p>
-    //             <p className="ticket-card__seat">
-    //                 {seat}
-    //             </p>
-    //          </section>
-    //          <section className="ticket-card__order-number">
-    //             <p className='barcode'>#A4E31</p>
-    //             <p className='order-number'>#A4E31</p>
-    //          </section>
-    //        </section>
-    // </section>
   )
 }
 
