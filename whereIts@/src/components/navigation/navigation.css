@@ -18,7 +18,7 @@
     align-items: center;
     border: solid 2px var(--pink-text-color);
     border-radius: 2rem;
-    max-width: 80%;
+    max-width: 650px;
     margin: 1rem auto;
 }
 
