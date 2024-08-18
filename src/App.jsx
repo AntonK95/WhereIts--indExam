@@ -16,7 +16,7 @@ function App( ) {
 
   const eventStore = useEventStore(); // Instans av useEventStore
 
-  const isNavigationVisible = location.pathname !== '/';
+  const isNavigationVisible = location.pathname !== '/WhereIts--indExam/';
 
   return (
     <div className='body__section'>
